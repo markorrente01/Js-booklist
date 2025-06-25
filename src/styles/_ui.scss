@@ -1,0 +1,60 @@
+// Primary and Accent Colors
+$color-indigo-50: #eef2ff;    // Light background for add section
+$color-indigo-200: #c7d2fe;   // Input field border
+$color-indigo-300: #a5b4fc;   // Input focus ring
+$color-indigo-600: #4f46e5;   // Add button background
+$color-indigo-700: #4338ca;  // Add button hover, section titles
+
+// Neutral Colors (Grayscale)
+$color-white: #ffffff;
+$color-gray-50: #f9fafb;     // Table header background, row hover
+$color-gray-100: #f3f4f6;    // Table row divider
+$color-gray-200: #e5e7eb;    // Border for table section
+$color-gray-400: #9ca3af;    // Placeholder text
+$color-gray-500: #6b7280;    // Table header text, empty message
+$color-gray-700: #374151;    // Section titles, table body text (author/isbn)
+$color-gray-800: #1f2937;    // Main app title, table body text (book title)
+$color-cool-gray-background: #f0f4f8; // Overall body background
+
+// Status/Action Colors
+$color-red-200: #fecaca;    // Delete button focus ring
+$color-red-500: #ef4444;    // Delete button icon
+$color-red-700: #b91c1c;    // Delete button hover
+
+// Message Box Colors
+$color-warning-background: #fffacd; // Light yellow
+$color-warning-text: #a16207;     // Dark yellow
+
+// Selection Colors (for a unique touch)
+$color-selection-background: #a7f3d0; // Light mint/cyan
+$color-selection-text: #065f46;       // Dark green/cyan
+
+
+$font-family-primary: 'Inter', sans-serif;
+$font-size-base: 1rem; // 16px
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+
+$spacing-1: 0.25rem; // 4px
+$spacing-2: 0.5rem;  // 8px
+$spacing-4: 1rem;    // 16px
+$spacing-5: 1.25rem; // 20px
+$spacing-6: 1.5rem;  // 24px
+$spacing-7: 1.75rem; // 28px
+$spacing-8: 2rem;    // 32px
+$spacing-10: 2.5rem; // 40px
+
+$border-radius-sm: 0.375rem; // rounded-md
+$border-radius-md: 0.5rem;   // rounded-lg
+$border-radius-lg: 0.75rem;  // rounded-xl
+
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+$shadow-xl: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); // Use for button, slightly stronger
+$shadow-button-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
