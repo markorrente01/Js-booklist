@@ -1,0 +1,53 @@
+import {Ui} from "./Ui";
+
+export function HandleUi(){};
+const ui = new Ui();
+HandleUi.prototype.addBook = function (book) {
+    const tableBody = ui.tableContent;
+    //create a new tr element and append to table body
+    const tr = document.createElement('tr');
+        tr.innerHTML = `<tr>
+              <td>${book.title}</td>
+              <td>${book.author}</td>
+              <td>${book.isbn}</td>
+              <td>
+                <button id="delete_btn" title="Delete">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ef4444" id="delete_svg">
+                    <path d="M280-120q-33 0-56.5-23.5T200-200v-520q-17 0-28.5-11.5T160-760q0-17 11.5-28.5T200-800h160q0-17 11.5-28.5T400-840h160q17 0 28.5 11.5T600-800h160q17 0 28.5 11.5T800-760q0 17-11.5 28.5T760-720v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM400-280q17 0 28.5-11.5T440-320v-280q0-17-11.5-28.5T400-640q-17 0-28.5 11.5T360-600v280q0 17 11.5 28.5T400-280Zm160 0q17 0 28.5-11.5T600-320v-280q0-17-11.5-28.5T560-640q-17 0-28.5 11.5T520-600v280q0 17 11.5 28.5T560-280ZM280-720v520-520Z"/>
+                  </svg>
+              </button>
+            </td>
+            </tr>
+        `;
+    tableBody.appendChild(tr);
+    return;
+}
+HandleUi.prototype.showAlert = function (msg, fontColor, bgColor, display) {
+    const alertMessage = ui.alertMessage;
+        alertMessage.textContent = msg;
+        alertMessage.style.display = display;
+        alertMessage.style.color = fontColor;
+        alertMessage.style.backgroundColor = bgColor;
+    setTimeout(()=>{
+        alertMessage.style.display = 'none';
+    }, 3000)
+    return;
+}
+HandleUi.prototype.deleteBook = function (isbn) {
+    deleteFromStore(isbn);
+}
+HandleUi.prototype.clearFields = function (){
+    ui.bookTitle.value = '';
+    ui.author.value = '';
+    ui.isbn.value = '';
+}
+HandleUi.prototype.checkTableEmpty = function () {
+    const emptyMessage = ui.emptyMessage;
+    const tableBody = ui.tableContent;
+    const rows = tableBody.getElementsByTagName('tr');
+    if (rows.length === 0) {
+        emptyMessage.classList.add('show')
+    } else {
+        emptyMessage.classList.remove('show')
+    }
+}

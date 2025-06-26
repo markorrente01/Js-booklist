@@ -74,7 +74,8 @@ main {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   width: 50rem;
   padding: 1.5rem 1.25rem 1.25rem 1.25rem;
-  background-color: hsl(0, 0%, 100%);
+  background-color: #ffffff;
+  position: relative;
 }
 
 .app_title {
@@ -91,11 +92,12 @@ main {
   background-color: #eef2ff;
   box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   padding: 20px 24px 20px 24px;
+  margin-bottom: 1.75rem;
 }
 
 .add__book-title {
   margin-bottom: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #4338ca;
 }
 
@@ -112,7 +114,7 @@ main {
 }
 
 .input_wrapper input {
-  width: 290px;
+  width: 14.8rem;
   padding: 0.313rem 0 0.313rem 0.625rem;
   border-radius: 0.375rem;
   border: 1px solid #c7d2fe;
@@ -171,7 +173,91 @@ main {
 }
 
 .current_collection {
-  border: 1px solid;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.current_collection-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #1f2937;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: justify;
+}
+
+thead {
+  color: #6b7280;
+  font-size: 0.8rem;
+  font-weight: 400;
+  background-color: #f9fafb;
+}
+
+th {
+  padding: 0.4rem 0;
+}
+
+tbody, td button {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+tbody tr td:first-child, thead tr th:first-child {
+  padding-left: 1.25rem;
+}
+
+tr td {
+  color: #374151;
+}
+
+tr td:first-child {
+  font-weight: 700;
+  color: #1f2937;
+}
+
+tr td {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+tbody tr:not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr {
+  transition: 0.3s linear;
+}
+tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+#delete_btn {
+  display: flex;
+  align-items: center;
+  color: #ef4444;
+  border-radius: 5px;
+  transition: 0.3s linear;
+}
+#delete_btn:hover {
+  color: #b91c1c;
+}
+#delete_btn:active {
+  background-color: #fecaca;
+}
+
+#delete_btn svg {
+  fill: #ef4444;
+  transition: 0.3s linear;
+}
+#delete_btn svg:hover {
+  fill: #b91c1c;
 }
 
 ::-moz-placeholder {
@@ -192,10 +278,79 @@ main {
   background-color: #a7f3d0;
 }
 
-.empty_message-block {
+.empty_message {
+  display: none;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 1.25rem 0;
+}
+
+.empty_message.show {
   display: block;
 }
 
-.empty_message {
+.alert {
+  padding: 0.3rem 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border-radius: 0.375rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  transition: 0.3s linear;
   display: none;
+}
+
+@media (max-width: 63.25rem) {
+  main {
+    width: 45rem;
+  }
+  .input_wrapper input {
+    width: 13rem;
+  }
+}
+@media (max-width: 55.938rem) {
+  body {
+    display: unset;
+    place-content: unset;
+    background-color: #ffffff;
+  }
+  main {
+    border-radius: unset;
+    box-shadow: unset;
+    width: 100%;
+  }
+  .input_container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .input_wrapper input {
+    width: 100%;
+  }
+}
+@media (max-width: 31.25rem) {
+  html {
+    font-size: 12.8pt;
+  }
+  #delete_btn svg {
+    width: 50px;
+  }
+  .alert {
+    width: 70%;
+    top: 0.4rem;
+  }
+  .app_title {
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 23.75rem) {
+  html {
+    font-size: 12.5pt;
+  }
+  #delete_btn svg {
+    width: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
