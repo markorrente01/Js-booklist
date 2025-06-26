@@ -3,7 +3,7 @@ import { HandleUi } from "./components/HandleUi";
 import { Ui } from "./components/Ui";
 
 const handleUi = new HandleUi(); 
-    handleUi.checkTableEmpty();
+    document.addEventListener('DOMContentLoaded', handleUi.checkTableEmpty)
 const ui = new Ui();
     ui.addBook.addEventListener('click', function(){
         const bookTitle = ui.bookTitle.value.trim(),
