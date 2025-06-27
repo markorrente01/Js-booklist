@@ -24,6 +24,7 @@ const ui = new Ui();
 ui.tableContent.addEventListener('click', (e)=>{
     if(e.target.id = 'delete_svg'){
         e.target.parentElement.parentElement.parentElement.remove();
-        handleUi.showAlert('Book deleted!', '#eef2ff', ' #ef4444', 'block')
+        handleUi.showAlert('Book deleted!', '#eef2ff', ' #ef4444', 'block');
+        handleUi.checkTableEmpty();
     }
 })
