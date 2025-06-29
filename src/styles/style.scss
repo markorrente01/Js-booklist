@@ -126,7 +126,8 @@ main{
 table{
     width: 100%;
     border-collapse: collapse;
-    text-align: justify;
+    table-layout: fixed;
+    text-align: center;
 }
 thead{
     color: u.$color-gray-500;
@@ -137,16 +138,13 @@ thead{
 th{
     padding: .4rem 0;
 }
-tbody, td button{
+tbody, tr td button{
     font-size: .75rem;
     font-weight: u.$font-weight-medium;
 }
-tbody tr td:first-child, thead tr th:first-child{
-    padding-left: u.$spacing-5;
-}
-tr td{
-    color: u.$color-gray-700;
-}
+// tbody tr td:first-child, thead tr th:first-child{
+//     padding-left: u.$spacing-5;
+// }
 tr td:first-child{
     font-weight: u.$font-weight-bold;
     color: u.$color-gray-800;
@@ -154,6 +152,8 @@ tr td:first-child{
 tr td{
     padding-top: .3rem;
     padding-bottom: .3rem;
+    color: u.$color-gray-700;
+    word-wrap: break-word;
 }
 tbody tr:not(:last-child){
     border-bottom: 1px solid u.$color-gray-200;

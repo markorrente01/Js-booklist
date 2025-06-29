@@ -190,7 +190,8 @@ main {
 table {
   width: 100%;
   border-collapse: collapse;
-  text-align: justify;
+  table-layout: fixed;
+  text-align: center;
 }
 
 thead {
@@ -204,17 +205,9 @@ th {
   padding: 0.4rem 0;
 }
 
-tbody, td button {
+tbody, tr td button {
   font-size: 0.75rem;
   font-weight: 500;
-}
-
-tbody tr td:first-child, thead tr th:first-child {
-  padding-left: 1.25rem;
-}
-
-tr td {
-  color: #374151;
 }
 
 tr td:first-child {
@@ -225,6 +218,8 @@ tr td:first-child {
 tr td {
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
+  color: #374151;
+  word-wrap: break-word;
 }
 
 tbody tr:not(:last-child) {
